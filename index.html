@@ -2,51 +2,48 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIXLINK FOX BLUE - V4 ULTRA</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;800&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<title>BIXLINK - Membangun Masa Depan Finansial Bersama</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050712;color:#fff;font-family:'Space Grotesk',sans-serif;min-height:100vh;overflow-x:hidden}
-#stars{position:fixed;inset:0;z-index:-1}
-.phone{max-width:420px;margin:0 auto;padding:12px 14px 110px}
-.status{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:12px;padding:6px 10px}
-.header{display:flex;align-items:center;justify-content:space-between;margin:10px 0 18px}
-.fox{width:86px;height:86px;background:linear-gradient(145deg,#FFD700,#B8860B);border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:46px;box-shadow:0 0 40px rgba(255,215,0,0.6)}
-.brand{margin-left:12px}.brand h2{font-size:18px;color:#FFD700}.brand p{font-size:9px;letter-spacing:2.5px;color:#A78BFA;font-family:'JetBrains Mono'}
-.v3-badge{padding:8px 14px;border-radius:20px;background:rgba(0,0,0,0.6);border:1px solid rgba(255,215,0,0.5);font-size:10px;color:#FFD700}
-.title{text-align:center;margin:8px 0 18px}.title h1{font-size:42px;font-weight:800;background:linear-gradient(180deg,#FFF7A0,#FFD700,#B8860B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:0.95}
-.title.sub{font-size:11px;color:#FFD700;margin-top:8px}.title.sub2{font-size:11px;color:#A78BFA;margin-top:6px;font-family:'JetBrains Mono'}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
-.card{background:linear-gradient(145deg,rgba(25,25,40,0.9),rgba(15,15,28,0.95));border:1px solid rgba(255,215,0,0.25);border-radius:18px;padding:16px 12px;text-align:center;box-shadow:0 0 20px rgba(139,92,246,0.15)}
-.card-icon{font-size:36px;margin-bottom:6px}.card h3{font-size:18px;color:#FFD77A}.card p{font-size:10px;color:#9CA3AF;font-family:'JetBrains Mono'}.tag{margin-top:8px;display:inline-flex;padding:4px 10px;border-radius:12px;background:rgba(34,197,94,0.12);font-size:9px;color:#4ADE80}
-.tvl{margin:14px 0;background:linear-gradient(145deg,rgba(25,25,40,0.95),rgba(15,15,28,0.98));border:1px solid rgba(255,215,0,0.3);border-radius:18px;padding:16px;display:flex;justify-content:space-between;align-items:center}
-.tvl-label{font-size:10px;color:#A78BFA;font-family:'JetBrains Mono'}.tvl-val{font-size:28px;font-weight:800;color:#FFD700}.tvl-up{font-size:12px;color:#22C55E}
-.bottom{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:92%;max-width:420px;background:rgba(20,20,35,0.95);border:1px solid rgba(255,215,0,0.25);border-radius:24px;display:flex;justify-content:space-around;padding:10px 6px;z-index:10}
-.b-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 12px;border-radius:16px;color:#6B7280;font-size:9px}.b-item.active{background:rgba(139,92,246,0.15);color:#C084FC}.bi{font-size:18px}
-.btn-gold-full{margin:16px 0;width:100%;padding:16px;border-radius:16px;background:linear-gradient(135deg,#FFD700,#FF8C00);color:#000;font-weight:800;font-size:13px;border:none;box-shadow:0 10px 30px rgba(255,215,0,0.4)}
+body{background:#080A12;color:#fff;font-family:'Space Grotesk',sans-serif}
+.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px);background-size:60px 60px;z-index:-1}
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.logo{font-weight:700;color:#FFC82C;letter-spacing:2px;font-size:20px}
+.nav{display:flex;gap:12px}
+.nav a{color:#9CA3AF;text-decoration:none;font-size:12px}
+.hero{max-width:720px;margin:0 auto;padding:60px 20px;text-align:center}
+.badge{display:inline-block;padding:8px 16px;border-radius:20px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:#A78BFA;font-size:11px;letter-spacing:1px;margin-bottom:20px}
+.hero h1{font-size:48px;line-height:1;letter-spacing:-2px}
+.hero h1 span.gold{color:#FFC82C}
+.hero h1 span.white{color:#fff;display:block}
+.hero p{color:#9CA3AF;margin-top:16px;line-height:1.6;font-size:14px}
+.cta{margin-top:28px;display:flex;gap:12px;justify-content:center}
+.btn{padding:14px 24px;border-radius:12px;font-weight:700;font-size:13px;border:none;cursor:pointer}
+.btn-gold{background:#FFC82C;color:#000}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:720px;margin:40px auto;padding:0 20px}
+.feat{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:18px}
+.feat h3{font-size:13px;color:#FFC82C;margin-bottom:6px}
+.feat p{font-size:11px;color:#9CA3AF;line-height:1.5}
+.footer{text-align:center;padding:40px 20px;color:#4B5563;font-size:11px;border-top:1px solid rgba(255,255,255,0.05);margin-top:40px}
+@media(max-width:600px){.hero h1{font-size:36px}.features{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<canvas id="stars"></canvas>
-<div class="phone">
-<div class="status"><span>9:41</span><span>📶 📡 🔋</span></div>
-<div class="header"><div style="display:flex;align-items:center"><div class="fox">🦊</div><div class="brand"><h2>BIXLINK</h2><p>FOX BLUE</p></div></div><div class="v3-badge">V3 • SUPER</div></div>
-<div class="title"><h1>BIXLINK</h1><div class="sub">MEMBANGUN MASA DEPAN FINANSIAL BERSAMA</div><div class="sub2">DeFi Protocol • Powered by BIXLINK Network</div></div>
-<button class="btn-gold-full" onclick="connect()">🦊 CONNECT WALLET — FOX BLUE</button>
-<div class="grid">
-<div class="card"><div class="card-icon">🪙</div><h3>21M SUPPLY</h3><p>Total Supply • Fixed Cap</p></div>
-<div class="card"><div class="card-icon">🛡️</div><h3>100 BIX MAX</h3><p>Max per Wallet</p><div class="tag">● Protected</div></div>
-<div class="card"><div class="card-icon">📚</div><h3>STAKING</h3><p>APY 18.5%</p><p>Rewards: 1,248.32 BIX</p></div>
-<div class="card"><div class="card-icon">🌐</div><h3>NETWORK</h3><p>Polygon Chain • L2</p><p style="color:#22C55E">● Active • Secure</p></div>
+<div class="grid-bg"></div>
+<div class="header"><div class="logo">BIXLINK</div><div class="nav"><a href="#">Whitepaper</a><a href="#">BIXERA</a><a href="#">FOX BLUE</a></div></div>
+<div class="hero">
+<div class="badge">🦊 FOX BLUE • SECURE • TRANSPARENT • DeFi GROW</div>
+<h1><span class="white">BIXLINK</span><span class="gold">MEMBANGUN MASA DEPAN</span><span class="white">FINANSIAL BERSAMA</span></h1>
+<p>Utility Token DeFi dengan supply tetap 21 Juta BIX. 1 KTP = 1 Akun • 100 BIX Maks per Wallet • Anti-Whale • Community Driven • Masa depan finansial terdesentralisasi.</p>
+<div class="cta"><button class="btn btn-gold">CONNECT WALLET</button><button class="btn btn-outline">WHITEPAPER 22 HAL</button></div>
 </div>
-<div class="tvl"><div><div class="tvl-label">TOTAL VALUE LOCKED</div><div style="margin-top:8px">📈 Chart naik</div></div><div style="text-align:right"><div class="tvl-val">$12.84M</div><div class="tvl-up">+12.6% (24h) ↑</div></div></div>
+<div class="features">
+<div class="feat"><h3>21 JUTA FIXED</h3><p>Total supply tidak akan pernah bertambah. No mint, no inflation.</p></div>
+<div class="feat"><h3>100 BIX / AKUN</h3><p>Anti-Whale system. 1 KTP = 1 Akun, fair distribution.</p></div>
+<div class="feat"><h3>FOX BLUE ECOSYSTEM</h3><p>Staking, Network 10 Level, Wallet, dan masa depan DeFi.</p></div>
 </div>
-<div class="bottom"><div class="b-item active"><div class="bi">🏠</div>Home</div><div class="b-item"><div class="bi">📚</div>Staking</div><div class="b-item"><div class="bi">🔄</div>Swap</div><div class="b-item"><div class="bi">💼</div>Wallet</div><div class="b-item"><div class="bi">👤</div>Profile</div></div>
-<script>
-const c=document.getElementById('stars'),x=c.getContext('2d');function rs(){c.width=innerWidth;c.height=innerHeight}addEventListener('resize',rs);rs();
-let s=[];for(let i=0;i<120;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.8,o:Math.random()});
-function dr(){x.clearRect(0,0,c.width,c.height);s.forEach(p=>{x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle=`rgba(${p.o>0.5?'255,215,0':'139,92,246'},${p.o})`;x.fill();p.y-=0.2;if(p.y<0){p.y=c.height;p.x=Math.random()*c.width}});requestAnimationFrame(dr)}dr();
-function connect(){if(!window.ethereum){alert('Install Metamask!');return}ethereum.request({method:'eth_requestAccounts'}).then(a=>{alert('Connected: '+a[0].slice(0,6)+'...')})}
-</script>
+<div class="footer">© 2026 BIXLINK • BIXERA GLOBAL • FOX BLUE • Built for Community</div>
 </body>
 </html>
