@@ -1,105 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BIXLINK - FOX BLUE EDITION | 21 JUTA FIXED</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIXLINK • FOX BLUE V3 SUPER</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Inter',sans-serif;background:#080A12;color:#fff}
-.orbitron{font-family:'Orbitron',sans-serif}
-.bg-grid{background-image:linear-gradient(rgba(139,92,246,0.15) 1px, transparent 1px),linear-gradient(90deg, rgba(139,92,246,0.15) 1px, transparent 1px);background-size:50px 50px}
-.gold-text{background:linear-gradient(90deg,#FFD700,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.card{backdrop-filter:blur(12px);background:rgba(255,255,255,0.05);border:1px solid rgba(139,92,246,0.3)}
-.neon{box-shadow:0 0 20px rgba(139,92,246,0.6)}
+:root{--bg:#070914;--gold:#FFD60A;--gold2:#FF9500;--purple:#8B5CF6;--cyan:#22D3EE;--blue:#3B82F6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:#fff;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+#canvas{position:fixed;inset:0;z-index:-3}
+.bg-glow{position:fixed;width:900px;height:900px;background:radial-gradient(circle at center,rgba(139,92,246,0.35),rgba(59,130,246,0.15),transparent 70%);top:-300px;left:50%;transform:translateX(-50%);filter:blur(80px);z-index:-2;animation:pulse 4s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(1.1)}}
+.header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid rgba(139,92,246,0.12);backdrop-filter:blur(16px);background:rgba(7,9,20,0.7);position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-box{width:44px;height:44px;background:conic-gradient(from 0deg,var(--gold),var(--gold2),var(--gold));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 0 30px rgba(255,214,10,0.5);animation:rotate 6s linear infinite}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.logo-text{font-weight:800;font-size:19px;letter-spacing:2px;color:var(--gold)}
+.badges{display:flex;gap:6px}.badge{font-family:'JetBrains Mono';font-size:9px;padding:7px 11px;border-radius:99px;font-weight:700}
+.b-blue{background:linear-gradient(135deg,#3B82F6,#2563EB);color:#fff}.b-purple{background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.35);color:#C4B5FD}
+.hero{padding:26px 20px 10px;text-align:center;max-width:560px;margin:0 auto}
+.pill{display:inline-flex;gap:8px;padding:9px 18px;border-radius:99px;background:rgba(34,211,238,0.08);border:1px solid rgba(34,211,238,0.4);color:var(--cyan);font-family:'JetBrains Mono';font-size:10px;letter-spacing:1.2px;margin-bottom:20px;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.hero h1{font-size:34px;line-height:1.05;font-weight:800}
+.gold-grad{background:linear-gradient(90deg,var(--gold),#FF8A00,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200%;animation:shimmer 3s linear infinite}
+@keyframes shimmer{to{background-position:200% 0}}
+.hero p{margin-top:14px;color:#9CA3AF;font-size:13.5px;line-height:1.65}
+.cta{display:flex;gap:10px;margin-top:22px}.btn{flex:1;padding:17px 10px;border-radius:16px;font-weight:800;font-size:12px;border:none;cursor:pointer}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;box-shadow:0 10px 30px rgba(255,214,10,0.4)}
+.btn-ghost{background:rgba(255,255,255,0.05);border:1px solid rgba(139,92,246,0.4);color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 14px}
+.card{background:linear-gradient(145deg,rgba(17,24,39,0.9),rgba(12,12,22,0.8));border:1px solid rgba(139,92,246,0.18);border-radius:20px;padding:16px;backdrop-filter:blur(14px)}
+.cl{font-family:'JetBrains Mono';font-size:9px;color:#A78BFA;margin-bottom:8px}.cv{font-size:20px;font-weight:800}.cs{font-size:10px;color:#6B7280;margin-top:4px}
+.wallet-modal{margin:14px;background:rgba(139,92,246,0.08);border:1px dashed rgba(139,92,246,0.3);border-radius:16px;padding:12px 14px;display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px}
+.dot{width:8px;height:8px;background:#22C55E;border-radius:50%;box-shadow:0 0 8px #22C55E;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.nav{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);width:94%;max-width:460px;background:rgba(12,14,28,0.82);backdrop-filter:blur(24px);border:1px solid rgba(139,92,246,0.22);border-radius:24px;display:flex;justify-content:space-around;padding:10px 8px;z-index:20}
+.ni{display:flex;flex-direction:column;align-items:center;gap:4px;padding:9px 16px;border-radius:16px;color:#6B7280;font-family:'JetBrains Mono';font-size:9px;font-weight:700}
+.ni.active{background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:#fff;box-shadow:0 8px 20px rgba(139,92,246,0.45)}
+.sp{height:100px}
+#toast{position:fixed;top:70px;left:50%;transform:translateX(-50%) translateY(-20px);background:rgba(0,0,0,0.85);border:1px solid rgba(139,92,246,0.4);padding:12px 18px;border-radius:12px;font-family:'JetBrains Mono';font-size:11px;opacity:0;transition:0.3s;z-index:99}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 </style>
 </head>
-<body class="bg-grid">
-<header class="flex justify-between items-center p-4 border-b border-purple-500/30 sticky top-0 bg-[#080A12]/90 z-50">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center font-black">🦊</div>
-<span class="orbitron text-xl gold-text">BIXLINK</span>
-<span class="text-xs bg-blue-600 px-2 py-1 rounded">FOX BLUE</span>
-</div>
-<div class="text-xs text-purple-400">21 JUTA FIXED • 100 BIX / AKUN</div>
-</header>
-<section class="text-center py-10 px-4">
-<div class="inline-block border border-cyan-400 text-cyan-400 px-4 py-1 rounded-full text-xs mb-4">🔒 SECURE • TRANSPARENT • DeFi GROW</div>
-<h1 class="orbitron text-3xl md:text-5xl font-black">BIXLINK<br><span class="gold-text">MEMBANGUN MASA DEPAN</span><br>FINANSIAL BERSAMA</h1>
-<p class="mt-4 text-gray-400 max-w-2xl mx-auto">Utility Token DeFi 21.000.000 Fixed Supply. 1 KTP 1 Akun Anti-Whale.</p>
-<div class="mt-6 flex justify-center gap-3">
-<button class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black px-6 py-3 rounded-xl font-bold">CONNECT WALLET</button>
-<button class="border border-purple-500 px-6 py-3 rounded-xl">WHITEPAPER 22 HAL</button>
-</div>
-</section>
-<nav class="grid grid-cols-5 gap-2 px-2 max-w-5xl mx-auto">
-<button onclick="show('home')" class="tab bg-purple-600 py-3 rounded-xl text-sm font-bold">🏠 HOME</button>
-<button onclick="show('wallet')" class="tab bg-gray-800 py-3 rounded-xl text-sm">💼 WALLET</button>
-<button onclick="show('stake')" class="tab bg-gray-800 py-3 rounded-xl text-sm">📈 STAKE</button>
-<button onclick="show('network')" class="tab bg-gray-800 py-3 rounded-xl text-sm">🌐 NETWORK</button>
-<button onclick="show('profile')" class="tab bg-gray-800 py-3 rounded-xl text-sm">👤 PROFILE</button>
-</nav>
-<div id="home" class="panel p-4 max-w-5xl mx-auto mt-6">
-<div class="grid md:grid-cols-3 gap-4">
-<div class="card p-4 rounded-2xl"><div class="text-purple-400 text-xs">TOTAL SUPPLY</div><div class="text-2xl font-black">21,000,000 BIX</div></div>
-<div class="card p-4 rounded-2xl"><div class="text-cyan-400 text-xs">PER AKUN</div><div class="text-2xl font-black">100 BIX FAIR</div></div>
-<div class="card p-4 rounded-2xl"><div class="text-yellow-400 text-xs">STAKING POOL</div><div class="text-2xl font-black">8,400,000 BIX</div></div>
-</div>
-<div class="mt-6 card p-6 rounded-2xl">
-<h3 class="orbitron gold-text">TOKENOMICS FOX BLUE</h3>
-<div class="mt-3 text-sm space-y-2">
-<div>🔒 15% Perusahaan (3.15jt) - Vesting 24 Bulan</div>
-<div>💎 40% Staking Pool (8.4jt) - APY 120-200%</div>
-<div>🚀 15% Ecosystem (3.15jt) - Marketing</div>
-<div>💧 20% Liquidity (4.2jt) - Locked PinkLock</div>
-<div>🎁 10% Airdrop (2.1jt) - 100 BIX x 21K Member</div>
-</div>
-</div>
-</div>
-<div id="wallet" class="panel hidden p-4 max-w-5xl mx-auto mt-6">
-<div class="card p-6 rounded-2xl text-center">
-<div class="text-gray-400">Your Balance</div>
-<div class="text-4xl font-black gold-text mt-2">100.00 BIX</div>
-<div class="text-sm text-gray-400">$10.00 @ $0.10 Internal</div>
-</div>
-</div>
-<div id="stake" class="panel hidden p-4 max-w-5xl mx-auto mt-6">
-<h3 class="orbitron text-xl mb-4">STAKING REWARDS</h3>
-<div class="grid md:grid-cols-4 gap-3">
-<div class="card p-4 rounded-xl text-center"><div class="text-xs">30 DAYS</div><div class="text-2xl font-black text-yellow-400">120% APY</div><button class="mt-3 w-full bg-yellow-600 text-black py-2 rounded-lg text-xs font-bold">STAKE NOW</button></div>
-<div class="card p-4 rounded-xl text-center"><div class="text-xs">90 DAYS</div><div class="text-2xl font-black text-yellow-400">140% APY</div><button class="mt-3 w-full bg-gray-700 py-2 rounded-lg text-xs">STAKE NOW</button></div>
-<div class="card p-4 rounded-xl text-center"><div class="text-xs">180 DAYS</div><div class="text-2xl font-black text-yellow-400">170% APY</div><button class="mt-3 w-full bg-gray-700 py-2 rounded-lg text-xs">STAKE NOW</button></div>
-<div class="card p-4 rounded-xl text-center neon"><div class="text-xs">360 DAYS</div><div class="text-2xl font-black text-yellow-400">200% APY</div><button class="mt-3 w-full bg-purple-600 py-2 rounded-lg text-xs font-bold">STAKE NOW</button></div>
-</div>
-</div>
-<div id="network" class="panel hidden p-4 max-w-5xl mx-auto mt-6">
-<div class="card p-6 rounded-2xl">
-<h3 class="orbitron">NETWORK REWARDS - 10 LEVELS</h3>
-<div class="mt-3 grid grid-cols-2 text-xs gap-2">
-<div>L1 20% - 1 Direct</div><div>L6 1% - 6 Directs</div>
-<div>L2 5% - 2 Directs</div><div>L7 1% - 7 Directs</div>
-<div>L3 2% - 3 Directs</div><div>L8 2% - 8 Directs</div>
-<div>L4 1% - 4 Directs</div><div>L9 2% - 9 Directs</div>
-<div>L5 1% - 5 Directs</div><div>L10 5% - 10 Directs</div>
-</div>
-</div>
-</div>
-<div id="profile" class="panel hidden p-4 max-w-5xl mx-auto mt-6">
-<div class="card p-6 rounded-2xl">
-<div class="flex items-center gap-4"><div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-2xl">🦊</div><div><div class="font-bold">FOX BLUE MEMBER</div><div class="text-xs text-gray-400">KYC Verified • 1 KTP 1 Akun</div></div></div>
-</div>
-</div>
-<footer class="text-center py-10 text-xs text-gray-500">
-BIXLINK • FOX BLUE EDITION • 21 JUTA FIXED • 100 BIX PER AKUN<br>
-bixlink.app | t.me/bixlink_fox | © 2026<br>
-NO SC YET • Internal Ledger $0.10 • Foundation Phase Q3 2026
-</footer>
+<body>
+<canvas id="canvas"></canvas><div class="bg-glow"></div><div id="toast"></div>
+<div class="header"><div class="logo"><div class="logo-box">🦊</div><div class="logo-text">BIXLINK</div></div><div class="badges"><div class="badge b-blue">FOX BLUE • V3 SUPER</div><div class="badge b-purple">21M FIXED • 100 BIX</div></div></div>
+<div class="hero"><div class="pill">🔒 SECURE • ⚡ TRANSPARENT • 🚀 DeFi GROW</div>
+<h1><span style="color:#fff">BIXLINK</span><br><span class="gold-grad">MEMBANGUN MASA DEPAN</span><br><span style="color:#fff">FINANSIAL BERSAMA</span></h1>
+<p>Utility Token DeFi 21.000.000 Fixed Supply. Anti-Whale • 1 KTP 1 Akun • Staking 15-45% APY • Network 10 Level</p>
+<div class="cta"><button class="btn btn-gold" id="connectBtn" onclick="connectWallet()">🦊 CONNECT WALLET</button><button class="btn btn-ghost" onclick="showToast('Whitepaper 22 Hal segera!')">📄 WHITEPAPER</button></div></div>
+<div class="wallet-modal"><div style="display:flex;align-items:center;gap:8px"><div class="dot"></div><span id="wStatus">WALLET NOT CONNECTED</span></div><span id="wAddr" style="color:#A78BFA">—</span></div>
+<div class="grid"><div class="card"><div class="cl">💎 TOTAL SUPPLY</div><div class="cv">21,000,000 BIX</div><div class="cs">Fixed • No Mint Ever</div></div><div class="card"><div class="cl">🛡️ PER WALLET</div><div class="cv">100 BIX MAX</div><div class="cs">Anti-Whale Protocol</div></div><div class="card"><div class="cl">📈 STAKING APY</div><div class="cv">15% - 45%</div><div class="cs">DeFi Grow Pool • Auto</div></div><div class="card"><div class="cl">🌐 NETWORK</div><div class="cv">10 LEVEL DEEP</div><div class="cs">Matrix Referral</div></div></div>
+<div class="sp"></div>
+<div class="nav"><div class="ni active">🏠 HOME</div><div class="ni" onclick="showToast('Wallet: Connect dulu!')">💼 WALLET</div><div class="ni" onclick="showToast('Staking V3 coming!')">📈 STAKE</div><div class="ni" onclick="showToast('Network 10 Level aktif!')">🌐 NET</div><div class="ni" onclick="showToast('Profile FOX BLUE')">👤 PRO</div></div>
 <script>
-function show(id){
-document.querySelectorAll('.panel').forEach(p=>p.classList.add('hidden'));
-document.getElementById(id).classList.remove('hidden');
-}
+const canvas=document.getElementById('canvas');const ctx=canvas.getContext('2d');let w,h,parts=[];function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight}addEventListener('resize',resize);resize();
+for(let i=0;i<60;i++)parts.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2+0.5,s:Math.random()*0.6+0.2,op:Math.random()*0.5+0.2});
+function anim(){ctx.clearRect(0,0,w,h);parts.forEach(p=>{p.y-=p.s;if(p.y<0){p.y=h;p.x=Math.random()*w}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.28);ctx.fillStyle=`rgba(139,92,246,${p.op})`;ctx.fill()});requestAnimationFrame(anim)}anim();
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+async function connectWallet(){const btn=document.getElementById('connectBtn'),st=document.getElementById('wStatus'),ad=document.getElementById('wAddr');if(!window.ethereum){showToast('Install Metamask / Trust Wallet!');open('https://metamask.io/download/','_blank');return}try{btn.textContent='CONNECTING...';const a=await ethereum.request({method:'eth_requestAccounts'});const short=a[0].slice(0,6)+'...'+a[0].slice(-4);ad.textContent=short;st.textContent='CONNECTED • FOX BLUE';st.style.color='#22C55E';btn.textContent='✅ '+short;btn.style.background='linear-gradient(135deg,#22C55E,#16A34A)';showToast('Connected: '+short)}catch(e){btn.textContent='🦊 CONNECT WALLET';showToast('Gagal: '+e.message)}}
 </script>
 </body>
 </html>
