@@ -3,23 +3,24 @@
 <title>FOX BLUE BIX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050208;color:#fff;font-family:sans-serif;overflow:hidden;min-height:100vh}
-.glow{position:fixed;inset:0;background:radial-gradient(ellipse at 50% 35%, rgba(59,130,246,0.35) 0%, transparent 70%);pointer-events:none}
-.stage{position:relative;width:100%;height:65vh;display:flex;align-items:center;justify-content:center}
+body{background:#050208;color:#fff;font-family:sans-serif;min-height:100vh;overflow:hidden}
+.glow{position:fixed;inset:0;background:radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.35), transparent 70%)}
+.stage{position:relative;z-index:2;height:65vh;display:flex;align-items:center;justify-content:center}
 .fox-box{position:relative;animation:float 3.5s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-video{width:340px;height:460px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.15) contrast(1.1) drop-shadow(0 20px 40px rgba(59,130,246,0.6));}
-.rings{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:340px;height:100px;pointer-events:none}
-.ring{position:absolute;inset:0;border:1.5px solid #3B82F6;border-radius:50%;box-shadow:0 0 25px #3B82F6;animation:spin 6s linear infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+video{width:340px;height:460px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(59,130,246,0.7));}
+.rings{position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:330px;height:100px}
+.ring{position:absolute;inset:0;border:1.5px solid #3B82F6;border-radius:50%;box-shadow:0 0 20px #3B82F6;animation:spin 6s linear infinite}
 .ring:nth-child(2){transform:scale(0.85) rotateX(70deg);opacity:0.6}
 .ring:nth-child(3){transform:scale(1.15) rotateX(70deg);opacity:0.25}
 @keyframes spin{to{transform:rotate(360deg)}}
-.bottom{padding:20px} .bottom small{color:#3B82F6;letter-spacing:3px;font-size:10px} .bottom h1{font-size:40px;font-weight:300}
+.bottom{position:relative;z-index:2;padding:20px} .bottom small{color:#3B82F6;letter-spacing:3px;font-size:10px} .bottom h1{font-size:42px;font-weight:300}
 </style></head><body>
 <div class="glow"></div>
-<div style="padding:14px 18px;color:#3B82F6;font-weight:800">🦊 FOX BLUE BIXLINK</div>
 <div class="stage"><div class="fox-box">
-<video autoplay loop muted playsinline><source src="./fox.mp4" type="video/mp4"></video>
+<video autoplay loop muted playsinline>
+<source src="./Fox blue bix.mp4" type="video/mp4">
+</video>
 <div class="rings"><div class="ring"></div><div class="ring"></div><div class="ring"></div></div>
 </div></div>
 <div class="bottom"><small>THE FOX BLUE COMMUNITY</small><h1>A new era of<br>BIXLINK</h1></div>
