@@ -2,48 +2,127 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIXLINK - Membangun Masa Depan Finansial Bersama</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<title>BIXLINK FOX BLUE - MEMBER DASHBOARD DEMO</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080A12;color:#fff;font-family:'Space Grotesk',sans-serif}
-.grid-bg{position:fixed;inset:0;background-image:linear-gradient(rgba(139,92,246,0.06) 1px, transparent 1px),linear-gradient(90deg, rgba(139,92,246,0.06) 1px, transparent 1px);background-size:60px 60px;z-index:-1}
-.header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06)}
-.logo{font-weight:700;color:#FFC82C;letter-spacing:2px;font-size:20px}
-.nav{display:flex;gap:12px}
-.nav a{color:#9CA3AF;text-decoration:none;font-size:12px}
-.hero{max-width:720px;margin:0 auto;padding:60px 20px;text-align:center}
-.badge{display:inline-block;padding:8px 16px;border-radius:20px;background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.3);color:#A78BFA;font-size:11px;letter-spacing:1px;margin-bottom:20px}
-.hero h1{font-size:48px;line-height:1;letter-spacing:-2px}
-.hero h1 span.gold{color:#FFC82C}
-.hero h1 span.white{color:#fff;display:block}
-.hero p{color:#9CA3AF;margin-top:16px;line-height:1.6;font-size:14px}
-.cta{margin-top:28px;display:flex;gap:12px;justify-content:center}
-.btn{padding:14px 24px;border-radius:12px;font-weight:700;font-size:13px;border:none;cursor:pointer}
-.btn-gold{background:#FFC82C;color:#000}
-.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.15);color:#fff}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:720px;margin:40px auto;padding:0 20px}
-.feat{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:18px}
-.feat h3{font-size:13px;color:#FFC82C;margin-bottom:6px}
-.feat p{font-size:11px;color:#9CA3AF;line-height:1.5}
-.footer{text-align:center;padding:40px 20px;color:#4B5563;font-size:11px;border-top:1px solid rgba(255,255,255,0.05);margin-top:40px}
-@media(max-width:600px){.hero h1{font-size:36px}.features{grid-template-columns:1fr}}
+body{background:#050A14;color:#fff;font-family:'Space Grotesk',sans-serif;min-height:100vh}
+.bg{position:fixed;inset:0;background:radial-gradient(at 20% 10%, rgba(59,130,246,0.18), transparent 50%), radial-gradient(at 80% 80%, rgba(139,92,246,0.15), transparent 50%);pointer-events:none}
+.header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(10,18,32,0.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(59,130,246,0.2);position:sticky;top:0;z-index:10}
+.logo{font-weight:800;color:#60A5FA;letter-spacing:1px}
+.avatar{width:36px;height:36px;background:linear-gradient(135deg,#3B82F6,#1E40AF);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
+.container{max-width:430px;margin:0 auto;padding:16px 14px 110px}
+.welcome{background:linear-gradient(145deg,rgba(59,130,246,0.15),rgba(10,18,32,0.9));border:1px solid rgba(59,130,246,0.3);border-radius:18px;padding:16px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.welcome img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:2px solid #3B82F6}
+.bal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.card{background:linear-gradient(145deg,rgba(20,28,45,0.9),rgba(10,15,28,0.95));border:1px solid rgba(59,130,246,0.2);border-radius:16px;padding:14px}
+.card small{font-family:'JetBrains Mono';font-size:9px;color:#60A5FA;letter-spacing:1px}
+.card h2{font-size:22px;margin-top:6px;color:#fff}
+.card p{font-size:10px;color:#9CA3AF;margin-top:4px;font-family:'JetBrains Mono'}
+.card.gold{border-color:rgba(255,214,10,0.3);background:linear-gradient(145deg,rgba(255,214,10,0.08),rgba(20,28,45,0.9))}
+.card.gold h2{color:#FFD700}
+.ref-box{background:rgba(0,0,0,0.4);border:1px dashed rgba(59,130,246,0.4);border-radius:14px;padding:12px;display:flex;justify-content:space-between;align-items:center;margin:14px 0;font-family:'JetBrains Mono';font-size:11px}
+.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:800;font-size:12px;cursor:pointer}
+.btn-blue{background:linear-gradient(135deg,#3B82F6,#2563EB);color:#fff;box-shadow:0 8px 20px rgba(59,130,246,0.3)}
+.btn-gold{background:linear-gradient(135deg,#FFD700,#FF8C00);color:#000;margin-top:10px}
+.level{margin-top:14px;background:rgba(20,28,45,0.8);border:1px solid rgba(59,130,246,0.15);border-radius:16px;padding:14px}
+.level h3{font-size:12px;color:#60A5FA;letter-spacing:1px;margin-bottom:10px}
+.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:12px}
+.row span:last-child{color:#FFD700;font-family:'JetBrains Mono'}
+.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:92%;max-width:430px;background:rgba(10,18,32,0.92);backdrop-filter:blur(20px);border:1px solid rgba(59,130,246,0.25);border-radius:20px;display:flex;justify-content:space-around;padding:8px;z-index:10}
+.ni{padding:8px 12px;border-radius:12px;color:#6B7280;font-size:9px;font-family:'JetBrains Mono';text-align:center}
+.ni.active{background:rgba(59,130,246,0.15);color:#60A5FA}
+#loginScreen{position:fixed;inset:0;background:#050A14;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
+.login-box{width:100%;max-width:340px;background:linear-gradient(145deg,rgba(20,28,45,0.95),rgba(10,15,28,0.98));border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:24px;text-align:center}
+.login-box h1{color:#60A5FA;font-size:24px;margin-bottom:6px}
+.login-box p{color:#9CA3AF;font-size:12px;margin-bottom:20px}
+.inp{width:100%;padding:14px;background:rgba(0,0,0,0.4);border:1px solid rgba(59,130,246,0.2);border-radius:12px;color:#fff;margin-bottom:10px;font-family:'JetBrains Mono';font-size:13px}
 </style>
 </head>
 <body>
-<div class="grid-bg"></div>
-<div class="header"><div class="logo">BIXLINK</div><div class="nav"><a href="#">Whitepaper</a><a href="#">BIXERA</a><a href="#">FOX BLUE</a></div></div>
-<div class="hero">
-<div class="badge">🦊 FOX BLUE • SECURE • TRANSPARENT • DeFi GROW</div>
-<h1><span class="white">BIXLINK</span><span class="gold">MEMBANGUN MASA DEPAN</span><span class="white">FINANSIAL BERSAMA</span></h1>
-<p>Utility Token DeFi dengan supply tetap 21 Juta BIX. 1 KTP = 1 Akun • 100 BIX Maks per Wallet • Anti-Whale • Community Driven • Masa depan finansial terdesentralisasi.</p>
-<div class="cta"><button class="btn btn-gold">CONNECT WALLET</button><button class="btn btn-outline">WHITEPAPER 22 HAL</button></div>
+<div class="bg"></div>
+
+<div id="loginScreen">
+<div class="login-box">
+<div style="font-size:56px;margin-bottom:10px">🦊</div>
+<h1>FOX BLUE LOGIN</h1>
+<p>Demo Dashboard Member BIXLINK</p>
+<input class="inp" id="user" placeholder="Username: adam / demo">
+<input class="inp" id="pass" type="password" placeholder="Password: 123">
+<button class="btn btn-blue" onclick="login()">🚀 LOGIN DEMO</button>
+<p style="margin-top:14px;font-size:10px;color:#6B7280">Username bebas, password bebas - ini DEMO<br>Klik LOGIN langsung masuk</p>
 </div>
-<div class="features">
-<div class="feat"><h3>21 JUTA FIXED</h3><p>Total supply tidak akan pernah bertambah. No mint, no inflation.</p></div>
-<div class="feat"><h3>100 BIX / AKUN</h3><p>Anti-Whale system. 1 KTP = 1 Akun, fair distribution.</p></div>
-<div class="feat"><h3>FOX BLUE ECOSYSTEM</h3><p>Staking, Network 10 Level, Wallet, dan masa depan DeFi.</p></div>
 </div>
-<div class="footer">© 2026 BIXLINK • BIXERA GLOBAL • FOX BLUE • Built for Community</div>
+
+<div class="header">
+<div class="logo">BIXLINK • FOX BLUE</div>
+<div style="display:flex;gap:10px;align-items:center">
+<div style="font-family:'JetBrains Mono';font-size:10px;color:#22C55E">● ONLINE</div>
+<div class="avatar">🦊</div>
+</div>
+</div>
+
+<div class="container">
+<div class="welcome">
+<img src="https://i.ibb.co/3m0Q9cQ/fox-blue.png" onerror="this.src='https://via.placeholder.com/56/3B82F6/ffffff?text=🦊'" alt="fox">
+<div>
+<div style="font-weight:700">Welcome, <span id="uname">ADAM</span>!</div>
+<div style="font-family:'JetBrains Mono';font-size:10px;color:#60A5FA">FOX BLUE JANTAN • Level 3 • ID: FOX-8821</div>
+<div style="font-size:10px;color:#9CA3AF;margin-top:4px">0x7f...3a9b • Polygon • Connected</div>
+</div>
+</div>
+
+<div class="bal-grid">
+<div class="card gold"><small>💎 TOTAL BIX</small><h2>1,248.32</h2><p>= $4,247.12 • +12.6%</p></div>
+<div class="card"><small>📈 STAKING APY</small><h2>18.5%</h2><p>Reward: 42.12 BIX</p></div>
+<div class="card"><small>👥 NETWORK</small><h2>127</h2><p>Member • 10 Level</p></div>
+<div class="card"><small>💰 EARNING</small><h2>$892.40</h2><p>From Referral</p></div>
+</div>
+
+<div class="ref-box">
+<span>🔗 Referral Link</span>
+<span id="refLink" style="color:#60A5FA;max-width:140px;overflow:hidden;text-overflow:ellipsis">bixlink.app/r/adam-8821</span>
+</div>
+<button class="btn btn-blue" onclick="copyRef()">📋 COPY REFERRAL LINK</button>
+<button class="btn btn-gold" onclick="alert('🦊 CLAIM 42.12 BIX Success!')">🎁 CLAIM STAKING REWARD</button>
+
+<div class="level">
+<h3>🌐 NETWORK 10 LEVEL - LIVE</h3>
+<div class="row"><span>Level 1 - Direct (10%)</span><span>12 orang • 120 BIX</span></div>
+<div class="row"><span>Level 2 - (7%)</span><span>24 orang • 84 BIX</span></div>
+<div class="row"><span>Level 3 - (5%)</span><span>38 orang • 65 BIX</span></div>
+<div class="row"><span>Level 4-10 - (2-1%)</span><span>53 orang • 42 BIX</span></div>
+<div class="row" style="border:none;font-weight:700"><span>Total Network Bonus</span><span style="color:#22C55E">311 BIX</span></div>
+</div>
+
+<div class="level">
+<h3>📊 TRANSAKSI TERAKHIR</h3>
+<div class="row"><span>✅ Staking Reward</span><span>+12.5 BIX</span></div>
+<div class="row"><span>👥 Referral L1 - Budi</span><span>+10 BIX</span></div>
+<div class="row"><span>🔄 Swap BIX→USDT</span><span>-50 BIX</span></div>
+</div>
+
+</div>
+
+<div class="nav">
+<div class="ni active">🏠<br>Home</div>
+<div class="ni">📈<br>Stake</div>
+<div class="ni">🔄<br>Swap</div>
+<div class="ni">💼<br>Wallet</div>
+<div class="ni">👤<br>Profile</div>
+</div>
+
+<script>
+function login(){
+ const u=document.getElementById('user').value||'ADAM';
+ document.getElementById('uname').textContent=u.toUpperCase();
+ document.getElementById('loginScreen').style.display='none';
+}
+function copyRef(){
+ const t=document.getElementById('refLink').textContent;
+ navigator.clipboard.writeText(t);
+ alert('✅ Referral link copied: '+t);
+}
+</script>
 </body>
 </html>
