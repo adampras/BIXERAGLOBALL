@@ -2,127 +2,72 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BIXLINK FOX BLUE - MEMBER DASHBOARD DEMO</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<title>BIXLINK FOX BLUE - COT STYLE</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050A14;color:#fff;font-family:'Space Grotesk',sans-serif;min-height:100vh}
-.bg{position:fixed;inset:0;background:radial-gradient(at 20% 10%, rgba(59,130,246,0.18), transparent 50%), radial-gradient(at 80% 80%, rgba(139,92,246,0.15), transparent 50%);pointer-events:none}
-.header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:rgba(10,18,32,0.8);backdrop-filter:blur(12px);border-bottom:1px solid rgba(59,130,246,0.2);position:sticky;top:0;z-index:10}
-.logo{font-weight:800;color:#60A5FA;letter-spacing:1px}
-.avatar{width:36px;height:36px;background:linear-gradient(135deg,#3B82F6,#1E40AF);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px}
-.container{max-width:430px;margin:0 auto;padding:16px 14px 110px}
-.welcome{background:linear-gradient(145deg,rgba(59,130,246,0.15),rgba(10,18,32,0.9));border:1px solid rgba(59,130,246,0.3);border-radius:18px;padding:16px;display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.welcome img{width:56px;height:56px;border-radius:12px;object-fit:cover;border:2px solid #3B82F6}
-.bal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.card{background:linear-gradient(145deg,rgba(20,28,45,0.9),rgba(10,15,28,0.95));border:1px solid rgba(59,130,246,0.2);border-radius:16px;padding:14px}
-.card small{font-family:'JetBrains Mono';font-size:9px;color:#60A5FA;letter-spacing:1px}
-.card h2{font-size:22px;margin-top:6px;color:#fff}
-.card p{font-size:10px;color:#9CA3AF;margin-top:4px;font-family:'JetBrains Mono'}
-.card.gold{border-color:rgba(255,214,10,0.3);background:linear-gradient(145deg,rgba(255,214,10,0.08),rgba(20,28,45,0.9))}
-.card.gold h2{color:#FFD700}
-.ref-box{background:rgba(0,0,0,0.4);border:1px dashed rgba(59,130,246,0.4);border-radius:14px;padding:12px;display:flex;justify-content:space-between;align-items:center;margin:14px 0;font-family:'JetBrains Mono';font-size:11px}
-.btn{width:100%;padding:14px;border-radius:12px;border:none;font-weight:800;font-size:12px;cursor:pointer}
-.btn-blue{background:linear-gradient(135deg,#3B82F6,#2563EB);color:#fff;box-shadow:0 8px 20px rgba(59,130,246,0.3)}
-.btn-gold{background:linear-gradient(135deg,#FFD700,#FF8C00);color:#000;margin-top:10px}
-.level{margin-top:14px;background:rgba(20,28,45,0.8);border:1px solid rgba(59,130,246,0.15);border-radius:16px;padding:14px}
-.level h3{font-size:12px;color:#60A5FA;letter-spacing:1px;margin-bottom:10px}
-.row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:12px}
-.row span:last-child{color:#FFD700;font-family:'JetBrains Mono'}
-.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:92%;max-width:430px;background:rgba(10,18,32,0.92);backdrop-filter:blur(20px);border:1px solid rgba(59,130,246,0.25);border-radius:20px;display:flex;justify-content:space-around;padding:8px;z-index:10}
-.ni{padding:8px 12px;border-radius:12px;color:#6B7280;font-size:9px;font-family:'JetBrains Mono';text-align:center}
-.ni.active{background:rgba(59,130,246,0.15);color:#60A5FA}
-#loginScreen{position:fixed;inset:0;background:#050A14;z-index:100;display:flex;align-items:center;justify-content:center;padding:20px}
-.login-box{width:100%;max-width:340px;background:linear-gradient(145deg,rgba(20,28,45,0.95),rgba(10,15,28,0.98));border:1px solid rgba(59,130,246,0.3);border-radius:20px;padding:24px;text-align:center}
-.login-box h1{color:#60A5FA;font-size:24px;margin-bottom:6px}
-.login-box p{color:#9CA3AF;font-size:12px;margin-bottom:20px}
-.inp{width:100%;padding:14px;background:rgba(0,0,0,0.4);border:1px solid rgba(59,130,246,0.2);border-radius:12px;color:#fff;margin-bottom:10px;font-family:'JetBrains Mono';font-size:13px}
+body{background:#07040F;color:#fff;font-family:Inter,sans-serif;overflow:hidden}
+.header{display:flex;justify-content:space-between;padding:18px 20px;align-items:center}
+.logo{color:#FF1E7D;font-weight:800;letter-spacing:1px}
+.logo span{color:#fff;font-weight:400;font-size:12px}
+.controls{display:flex;gap:10px;position:absolute;bottom:180px;left:20px;z-index:5}
+.ctrl{padding:8px 14px;border-radius:20px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);font-size:10px;cursor:pointer;backdrop-filter:blur(10px)}
+.fox-wrap{position:relative;width:100%;height:70vh;display:flex;align-items:center;justify-content:center}
+.fox{width:320px;height:420px;background:radial-gradient(circle at center, rgba(255,30,125,0.25), transparent 70%);position:relative;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.ring{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:280px;height:80px;border:1px solid rgba(255,30,125,0.5);border-radius:50%;box-shadow:0 0 40px rgba(255,30,125,0.4);animation:spin 4s linear infinite}
+@keyframes spin{to{transform:translateX(-50%) rotateX(75deg) rotateZ(360deg)}}
+.fox-img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 30px rgba(255,30,125,0.6))}
+.text-bottom{position:absolute;bottom:40px;left:20px}
+.text-bottom p{font-size:10px;letter-spacing:3px;color:#FF1E7D;margin-bottom:8px}
+.text-bottom h1{font-size:42px;font-weight:300;line-height:1}
+.glow{position:fixed;inset:0;background:radial-gradient(ellipse at 50% 40%, rgba(255,30,125,0.15), transparent 60%);pointer-events:none}
 </style>
 </head>
 <body>
-<div class="bg"></div>
+<div class="glow"></div>
+<div class="header"><div class="logo">C FOX BLUE <span style="color:#888">BIXLINK</span></div><div style="font-size:12px;border:1px solid #444;padding:6px 14px;border-radius:20px">MEMBER LOGIN</div></div>
 
-<div id="loginScreen">
-<div class="login-box">
-<div style="font-size:56px;margin-bottom:10px">🦊</div>
-<h1>FOX BLUE LOGIN</h1>
-<p>Demo Dashboard Member BIXLINK</p>
-<input class="inp" id="user" placeholder="Username: adam / demo">
-<input class="inp" id="pass" type="password" placeholder="Password: 123">
-<button class="btn btn-blue" onclick="login()">🚀 LOGIN DEMO</button>
-<p style="margin-top:14px;font-size:10px;color:#6B7280">Username bebas, password bebas - ini DEMO<br>Klik LOGIN langsung masuk</p>
+<div class="fox-wrap">
+<div class="fox">
+<!-- GANTI src ini dengan video Fox Blue kamu nanti -->
+<img class="fox-img" src="https://i.ibb.co/3m0Q9cQ/fox-blue.png" alt="FOX BLUE" id="fox">
+<div class="ring"></div>
 </div>
 </div>
 
-<div class="header">
-<div class="logo">BIXLINK • FOX BLUE</div>
-<div style="display:flex;gap:10px;align-items:center">
-<div style="font-family:'JetBrains Mono';font-size:10px;color:#22C55E">● ONLINE</div>
-<div class="avatar">🦊</div>
-</div>
+<div class="controls">
+<div class="ctrl" id="soundBtn" onclick="toggleSound()">🔊 PLAY WITH SOUND</div>
+<div class="ctrl" id="motionBtn" onclick="toggleMotion()">⏸️ PAUSE MOTION</div>
 </div>
 
-<div class="container">
-<div class="welcome">
-<img src="https://i.ibb.co/3m0Q9cQ/fox-blue.png" onerror="this.src='https://via.placeholder.com/56/3B82F6/ffffff?text=🦊'" alt="fox">
-<div>
-<div style="font-weight:700">Welcome, <span id="uname">ADAM</span>!</div>
-<div style="font-family:'JetBrains Mono';font-size:10px;color:#60A5FA">FOX BLUE JANTAN • Level 3 • ID: FOX-8821</div>
-<div style="font-size:10px;color:#9CA3AF;margin-top:4px">0x7f...3a9b • Polygon • Connected</div>
-</div>
+<div class="text-bottom">
+<p>THE FOX BLUE COMMUNITY</p>
+<h1>A new era of<br>BIXLINK</h1>
 </div>
 
-<div class="bal-grid">
-<div class="card gold"><small>💎 TOTAL BIX</small><h2>1,248.32</h2><p>= $4,247.12 • +12.6%</p></div>
-<div class="card"><small>📈 STAKING APY</small><h2>18.5%</h2><p>Reward: 42.12 BIX</p></div>
-<div class="card"><small>👥 NETWORK</small><h2>127</h2><p>Member • 10 Level</p></div>
-<div class="card"><small>💰 EARNING</small><h2>$892.40</h2><p>From Referral</p></div>
-</div>
-
-<div class="ref-box">
-<span>🔗 Referral Link</span>
-<span id="refLink" style="color:#60A5FA;max-width:140px;overflow:hidden;text-overflow:ellipsis">bixlink.app/r/adam-8821</span>
-</div>
-<button class="btn btn-blue" onclick="copyRef()">📋 COPY REFERRAL LINK</button>
-<button class="btn btn-gold" onclick="alert('🦊 CLAIM 42.12 BIX Success!')">🎁 CLAIM STAKING REWARD</button>
-
-<div class="level">
-<h3>🌐 NETWORK 10 LEVEL - LIVE</h3>
-<div class="row"><span>Level 1 - Direct (10%)</span><span>12 orang • 120 BIX</span></div>
-<div class="row"><span>Level 2 - (7%)</span><span>24 orang • 84 BIX</span></div>
-<div class="row"><span>Level 3 - (5%)</span><span>38 orang • 65 BIX</span></div>
-<div class="row"><span>Level 4-10 - (2-1%)</span><span>53 orang • 42 BIX</span></div>
-<div class="row" style="border:none;font-weight:700"><span>Total Network Bonus</span><span style="color:#22C55E">311 BIX</span></div>
-</div>
-
-<div class="level">
-<h3>📊 TRANSAKSI TERAKHIR</h3>
-<div class="row"><span>✅ Staking Reward</span><span>+12.5 BIX</span></div>
-<div class="row"><span>👥 Referral L1 - Budi</span><span>+10 BIX</span></div>
-<div class="row"><span>🔄 Swap BIX→USDT</span><span>-50 BIX</span></div>
-</div>
-
-</div>
-
-<div class="nav">
-<div class="ni active">🏠<br>Home</div>
-<div class="ni">📈<br>Stake</div>
-<div class="ni">🔄<br>Swap</div>
-<div class="ni">💼<br>Wallet</div>
-<div class="ni">👤<br>Profile</div>
-</div>
+<audio id="bgm" loop><source src="https://cdn.pixabay.com/audio/2022/03/10/audio_c8c8a73467.mp3" type="audio/mpeg"></audio>
 
 <script>
-function login(){
- const u=document.getElementById('user').value||'ADAM';
- document.getElementById('uname').textContent=u.toUpperCase();
- document.getElementById('loginScreen').style.display='none';
+let playing=false, moving=true;
+const fox=document.getElementById('fox'), bgm=document.getElementById('bgm');
+function toggleSound(){
+ const btn=document.getElementById('soundBtn');
+ if(!playing){bgm.play();btn.textContent='🔇 MUTE SOUND';playing=true}
+ else{bgm.pause();btn.textContent='🔊 PLAY WITH SOUND';playing=false}
 }
-function copyRef(){
- const t=document.getElementById('refLink').textContent;
- navigator.clipboard.writeText(t);
- alert('✅ Referral link copied: '+t);
+function toggleMotion(){
+ const btn=document.getElementById('motionBtn');
+ const f=document.querySelector('.fox');
+ if(moving){f.style.animation='none';btn.textContent='▶️ PLAY MOTION';moving=false}
+ else{f.style.animation='float 3s ease-in-out infinite';btn.textContent='⏸️ PAUSE MOTION';moving=true}
 }
+// Efek magnet mouse - Fox ngikutin cursor
+document.addEventListener('mousemove', e=>{
+ if(!moving) return;
+ const x=(e.clientX/window.innerWidth -0.5)*20;
+ const y=(e.clientY/window.innerHeight -0.5)*20;
+ fox.style.transform=`translate(${x}px, ${y}px)`;
+});
 </script>
 </body>
 </html>
