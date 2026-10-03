@@ -4,139 +4,58 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>FOX BLUE BIXLINK - A New Era</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#02020A;color:#fff;font-family:'Space Grotesk',sans-serif;overflow-x:hidden}
+body{background:#02020A;color:#fff;font-family:'Space Grotesk',sans-serif}
 .serif{font-family:'Instrument Serif',serif}
-:root{--blue:#3B82F6;--blue-light:#60A5FA;--dark:#02020A}
-
-/* HEADER */
-.header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;z-index:50;background:rgba(2,2,10,0.8);backdrop-filter:blur(20px);border-bottom:1px solid rgba(59,130,246,0.1)}
-.logo{color:var(--blue);font-weight:800;letter-spacing:1px;font-size:13px}
-
-/* HERO */
-.hero{position:relative;min-height:95vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:80px}
-.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 35%, rgba(59,130,246,0.25) 0%, rgba(2,2,10,0) 70%);pointer-events:none}
-.fox-wrap{position:relative;width:340px;height:340px;display:flex;align-items:center;justify-content:center}
-.fox-wrap video{width:300px;height:420px;object-fit:contain;filter:drop-shadow(0 0 20px var(--blue));animation:float 3.5s ease-in-out infinite}
-.ring{position:absolute;border:1px solid rgba(59,130,246,0.4);border-radius:50%;box-shadow:0 0 20px rgba(59,130,246,0.3)}
-.ring1{width:320px;height:90px;bottom:30px;transform:rotateX(75deg)}
-.ring2{width:380px;height:110px;bottom:20px;transform:rotateX(75deg);opacity:0.3}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
-
-.hero-text{position:relative;z-index:2;text-align:left;width:100%;padding:0 22px;margin-top:20px}
-.badge{color:var(--blue);font-size:9px;letter-spacing:4px;text-transform:uppercase;margin-bottom:12px}
-.hero-text h1{font-family:'Instrument Serif',serif;font-size:42px;font-weight:400;line-height:0.95}
-.hero-text h1 i{font-style:italic;color:var(--blue-light)}
-.hero-text p{color:#9CA3AF;font-size:12px;line-height:1.6;margin-top:14px;max-width:320px}
-.btns{display:flex;gap:10px;margin-top:20px}
-.btn-primary{background:var(--blue);color:#000;padding:12px 20px;border-radius:30px;font-weight:700;font-size:11px;border:none}
-.btn-ghost{background:rgba(255,255,255,0.06);color:#fff;padding:12px 20px;border-radius:30px;font-size:11px;border:1px solid rgba(255,255,255,0.1)}
-
-.stats{width:100%;display:flex;gap:24px;padding:24px 22px;margin-top:30px;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
-.stats b{display:block;font-size:14px;font-weight:700}
-.stats span{font-size:9px;letter-spacing:2px;color:#6B7280}
-
-.marquee{overflow:hidden;white-space:nowrap;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#4B5563;font-size:11px;letter-spacing:2px}
-.marquee span{margin-right:40px}
-
-/* SECTIONS */
-.section{padding:60px 22px}
-.section small{color:var(--blue);letter-spacing:3px;font-size:9px}
-.section h2{font-family:'Instrument Serif',serif;font-size:32px;font-weight:400;margin-top:10px;line-height:1}
-.section h2 i{font-style:italic;color:var(--blue-light)}
-.grid{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:18px}
-.card b{font-size:12px;display:block;margin-top:10px}
-.card p{font-size:10px;color:#6B7280;margin-top:6px;line-height:1.5}
-
-.quote{padding:80px 22px;text-align:center;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
-.quote h2{font-family:'Instrument Serif',serif;font-size:22px;font-style:italic;line-height:1.3}
-.quote p{color:#6B7280;font-size:10px;letter-spacing:2px;margin-top:16px}
-
-.journey-img{width:100%;height:180px;background:#0A0A18;border-radius:16px;margin-top:16px;overflow:hidden;position:relative}
-.journey-img img{width:100%;height:100%;object-fit:cover;opacity:0.6}
-
-.spirit{display:flex;flex-direction:column;align-items:center;text-align:center;padding:60px 22px}
-.spirit img{width:240px;filter:drop-shadow(0 0 30px rgba(59,130,246,0.5))}
-
-.footer{padding:60px 22px;text-align:center;background:radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.15), transparent 70%)}
+.header{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:14px 20px;z-index:50;background:rgba(2,2,10,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(59,130,246,0.1)}
+.logo{color:#3B82F6;font-weight:800;font-size:12px}
+.hero{min-height:95vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:70px;position:relative}
+.glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%, rgba(59,130,246,0.35), transparent 70%)}
+.fox-wrap{position:relative;z-index:2;animation:float 3.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
+.fox-img{width:300px;filter:drop-shadow(0 0 18px #3B82F6) drop-shadow(0 20px 40px rgba(59,130,246,0.6))}
+.ring{position:absolute;left:50%;transform:translateX(-50%) rotateX(75deg);border:1px solid rgba(59,130,246,0.5);border-radius:50%;box-shadow:0 0 18px #3B82F6}
+.ring1{width:300px;height:80px;bottom:15px} .ring2{width:370px;height:100px;bottom:5px;opacity:0.25}
+.text{position:relative;z-index:2;padding:20px;width:100%;margin-top:10px}
+.badge{color:#3B82F6;font-size:9px;letter-spacing:4px} h1{font-family:'Instrument Serif',serif;font-size:40px;font-weight:400;margin-top:10px;line-height:.95} h1 i{font-style:italic;color:#60A5FA}
+p.sub{color:#9CA3AF;font-size:11px;margin-top:12px;line-height:1.6;max-width:320px}
+.btns{display:flex;gap:10px;margin-top:18px} .btn1{background:#3B82F6;color:#000;padding:11px 20px;border-radius:30px;font-weight:700;font-size:11px;border:none} .btn2{background:rgba(255,255,255,0.06);padding:11px 20px;border-radius:30px;font-size:11px;border:1px solid rgba(255,255,255,0.1)}
+.stats{width:100%;display:flex;gap:28px;padding:18px 20px;margin-top:28px;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.stats b{font-size:14px} .stats span{font-size:9px;color:#6B7280;letter-spacing:2px;display:block}
+.marquee{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#4B5563;font-size:10px;letter-spacing:3px;white-space:nowrap;overflow:hidden}
+.marquee span{margin-right:30px}
+.section{padding:56px 20px} .section small{color:#3B82F6;letter-spacing:3px;font-size:9px} .section h2{font-family:'Instrument Serif',serif;font-size:32px;margin-top:10px;line-height:1} .section h2 i{font-style:italic;color:#60A5FA}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:16px}
+.card b{font-size:11px} .card p{font-size:10px;color:#6B7280;margin-top:6px;line-height:1.5}
+.quote{padding:70px 20px;text-align:center;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.quote h2{font-family:'Instrument Serif',serif;font-size:24px;font-style:italic;line-height:1.3}
+.spirit{text-align:center;padding:60px 20px}
+.footer{padding:60px 20px;text-align:center;background:radial-gradient(ellipse at 50% 0%, rgba(59,130,246,0.18), transparent 70%)}
 .footer h2{font-family:'Instrument Serif',serif;font-size:36px}
 </style>
 </head>
 <body>
+<div class="header"><div class="logo">🦊 FOX BLUE • BIXLINK</div><div style="border:1px solid #3B82F6;padding:5px 12px;border-radius:20px;font-size:10px">MEMBER LOGIN</div></div>
 
-<div class="header"><div class="logo">🦊 FOX BLUE • BIXLINK</div><div style="border:1px solid var(--blue);padding:6px 14px;border-radius:20px;font-size:10px">MEMBER LOGIN</div></div>
-
-<div class="hero">
-<div class="hero-glow"></div>
-<div class="fox-wrap">
-<div class="ring ring1"></div><div class="ring ring2"></div>
-<video autoplay loop muted playsinline>
-<source src="./fox-blue-clean.mp4" type="video/mp4">
-</video>
-</div>
-<div class="hero-text">
-<div class="badge">THE FOX BLUE COMMUNITY</div>
-<h1>A new era of<br><i>extraordinary.</i></h1>
-<p>BIXLINK unites DeFi together with trust, transparency, and technology. Guardian Fox Blue protects the community with fixed supply and anti-whale protocol.</p>
-<div class="btns"><button class="btn-primary">JOIN THE PACK →</button><button class="btn-ghost">WHITEPAPER</button></div>
-</div>
-<div class="stats">
-<div><b>21M</b><span>FIXED SUPPLY</span></div>
-<div><b>100 BIX</b><span>MAX WALLET</span></div>
-<div><b>Fox Blue</b><span>GUARDIAN</span></div>
-</div>
+<div class="hero"><div class="glow"></div>
+<div class="fox-wrap"><div class="ring ring1"></div><div class="ring ring2"></div><img src="./fox.png" class="fox-img"></div>
+<div class="text"><div class="badge">THE FOX BLUE COMMUNITY</div><h1>A new era of<br><i>extraordinary.</i></h1><p class="sub">BIXLINK unites DeFi together with trust, transparency, and technology. Guardian Fox Blue protects the pack.</p><div class="btns"><button class="btn1">JOIN THE PACK →</button><button class="btn2">WHITEPAPER</button></div></div>
+<div class="stats"><div><b>21M</b><span>FIXED SUPPLY</span></div><div><b>100 BIX</b><span>MAX WALLET</span></div><div><b>FOX BLUE</b><span>GUARDIAN</span></div></div>
 </div>
 
-<div class="marquee">
-<span>🦊 High Security</span><span>• Exceptional DeFi •</span><span>Curated Community</span><span>• Private Vault •</span><span>Anti-Whale</span>
-</div>
+<div class="marquee"><span>🦊 High Security</span><span>• Exceptional DeFi •</span><span>Curated Community</span><span>• Private Vault •</span><span>Anti-Whale •</span><span>Fox Blue Guardian</span></div>
 
-<div class="section">
-<small>THE WORLD OF BIXLINK</small>
-<h2>Four pillars.<br><i>One community.</i></h2>
-<p style="color:#6B7280;font-size:11px;margin-top:12px;line-height:1.6">Each pillar represents a commitment — fixed supply, max wallet, community owned, and fully transparent.</p>
-<div class="grid">
-<div class="card"><div>🦊</div><b>Icons of DeFi</b><p>Fixed 21M supply, no more mint. Truly scarce like Bitcoin.</p></div>
-<div class="card"><div>💎</div><b>Crafted to be kept</b><p>100 BIX max prevents whales. Fair for all pack members.</p></div>
-<div class="card"><div>🏦</div><b>Exceptional Vaults</b><p>LP locked, renounced contract. Your assets guarded by Fox.</p></div>
-<div class="card"><div>🗺️</div><b>Curated Growth</b><p>Roadmap by community. No VC, no presale tricks.</p></div>
-</div>
-</div>
+<div class="section"><small>THE WORLD OF BIXLINK</small><h2>Four pillars.<br><i>One community.</i></h2><div class="grid"><div class="card"><div>🦊</div><b>Icons of DeFi</b><p>21M fixed, no mint. Scarce like BTC.</p></div><div class="card"><div>💎</div><b>Crafted to be kept</b><p>100 BIX max, anti-whale.</p></div><div class="card"><div>🏦</div><b>Exceptional Vaults</b><p>LP locked, renounced.</p></div><div class="card"><div>🗺️</div><b>Curated Growth</b><p>By community, no VC.</p></div></div></div>
 
-<div class="quote">
-<h2>Value, kept<br><i>securely.</i></h2>
-<p>GUARDED BY FOX BLUE • BUILT FOR THE PACK • FOREVER</p>
-</div>
+<div class="quote"><h2>Value, kept<br><i>securely.</i></h2><p style="color:#6B7280;font-size:9px;letter-spacing:3px;margin-top:14px">GUARDED BY FOX BLUE • BUILT FOR THE PACK</p></div>
 
-<div class="section">
-<small>THE PACK JOURNEY</small>
-<h2>Journeys worth<br><i>sharing.</i></h2>
-<div class="journey-img" style="background:linear-gradient(135deg,#0A1930,#1E40AF);display:flex;align-items:center;justify-content:center;font-size:40px">🦊🌊</div>
-<p style="color:#9CA3AF;font-size:11px;margin-top:20px;font-style:italic">"True wealth is not what you own. It is what we build together."</p>
-</div>
+<div class="section"><small>THE PACK JOURNEY</small><h2>Journeys worth<br><i>sharing.</i></h2><p class="sub" style="font-style:italic;margin-top:16px">"True wealth is not what you own. It is what we build together."</p></div>
 
-<div class="spirit">
-<video autoplay loop muted playsinline style="width:260px;filter:drop-shadow(0 0 20px var(--blue))"><source src="./fox-blue-clean.mp4" type="video/mp4"></video>
-<small style="color:var(--blue);letter-spacing:3px;font-size:9px;margin-top:20px">MEET YOUR GUARDIAN</small>
-<h2 class="serif" style="font-size:28px;margin-top:10px">The spirit of<br><i style="color:var(--blue-light)">the Fox Blue Era.</i></h2>
-<p style="color:#6B7280;font-size:11px;margin-top:12px;max-width:300px">Fox Blue is the guardian of BIXLINK Network. Smart, Connected, Fearless. He protects the pack from whales and scams.</p>
-<div style="margin-top:20px;text-align:left;width:100%;max-width:320px">
-<p style="color:var(--blue);font-size:10px;letter-spacing:2px;margin-top:12px">Smart.</p><p style="font-size:11px;color:#9CA3AF">Fixed supply, audited contract, no hidden functions.</p>
-<p style="color:var(--blue);font-size:10px;letter-spacing:2px;margin-top:12px">Connected.</p><p style="font-size:11px;color:#9CA3AF">Every holder is pack. One fox, one vote, one community.</p>
-<p style="color:var(--blue);font-size:10px;letter-spacing:2px;margin-top:12px">Fearless.</p><p style="font-size:11px;color:#9CA3AF">Anti-whale, anti-rug, anti-fear. Built to last.</p>
-</div>
-</div>
+<div class="spirit"><img src="./fox.png" style="width:240px;filter:drop-shadow(0 0 20px #3B82F6);animation:float 3.5s ease-in-out infinite"><div style="margin-top:20px"><small style="color:#3B82F6;letter-spacing:3px;font-size:9px">MEET YOUR GUARDIAN</small><h2 style="font-family:'Instrument Serif',serif;font-size:28px;margin-top:8px">The spirit of<br><i style="color:#60A5FA">the Fox Blue Era.</i></h2></div></div>
 
-<div class="footer">
-<small>JOIN THE PACK</small>
-<h2>Your place in<br><i style="color:var(--blue-light)">the new era.</i></h2>
-<p style="color:#6B7280;font-size:11px;margin-top:10px">Be part of the most loyal DeFi community. Hold BIXLINK, hold the future.</p>
-<div class="btns" style="justify-content:center;margin-top:24px"><button class="btn-primary" style="padding:14px 28px">🦊 CONNECT WALLET</button></div>
-<div style="margin-top:40px;color:#4B5563;font-size:9px;letter-spacing:2px">© 2026 FOX BLUE BIXLINK • THE PACK</div>
-</div>
-
+<div class="footer"><small style="color:#3B82F6;letter-spacing:3px;font-size:9px">JOIN THE PACK</small><h2>Your place in<br><i style="color:#60A5FA">the new era.</i></h2><div class="btns" style="justify-content:center;margin-top:22px"><button class="btn1" style="padding:14px 28px">🦊 CONNECT WALLET</button></div><div style="margin-top:40px;color:#4B5563;font-size:9px;letter-spacing:2px">© 2026 FOX BLUE BIXLINK</div></div>
 </body>
 </html>
